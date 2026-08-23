@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Escalia Digital — Software inteligente para negocios que no tienen tiempo que perder</title>
+<meta name="description" content="Creamos software de gestión a medida para autónomos y pequeños negocios. Citas, cobros, clientes y analítica, sin plantillas genéricas."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter','ui-sans-serif','system-ui','sans-serif'],
+        display: ['Space Grotesk','Inter','ui-sans-serif','sans-serif'],
+      },
+      colors: {
+        background:'oklch(0.985 0.008 85 / <alpha-value>)',
+        foreground:'oklch(0.22 0.02 150 / <alpha-value>)',
+        ink:'oklch(0.16 0.015 150 / <alpha-value>)',
+        surface:'oklch(0.965 0.012 85 / <alpha-value>)',
+        primary:'oklch(0.36 0.06 155 / <alpha-value>)',
+        'primary-foreground':'oklch(0.985 0.008 85 / <alpha-value>)',
+        muted:'oklch(0.94 0.012 90 / <alpha-value>)',
+        'muted-foreground':'oklch(0.48 0.02 150 / <alpha-value>)',
+        accent:'oklch(0.62 0.14 148 / <alpha-value>)',
+        border:'oklch(0.88 0.015 90 / <alpha-value>)',
+      }
+    }
+  }
+}
+</script>
+<style>
+  body{-webkit-font-smoothing:antialiased;font-feature-settings:"ss01","cv11";}
+  h1,h2,h3{letter-spacing:-0.02em;}
+  .font-display{font-family:'Space Grotesk',Inter,sans-serif;font-weight:700;letter-spacing:-0.035em;}
+</style>
+</head>
+<body class="bg-background text-foreground font-sans">
+
+<header class="border-b border-border/60">
+  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+    <a href="#top" class="flex items-center gap-2">
+      <span class="grid h-7 w-7 place-items-center rounded-md bg-primary text-primary-foreground">
+        <span class="font-display text-lg leading-none">e</span>
+      </span>
+      <span class="text-sm font-semibold tracking-tight">Escalia Digital</span>
+    </a>
+    <nav class="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
+      <a href="#problema" class="hover:text-foreground">El problema</a>
+      <a href="#solucion" class="hover:text-foreground">Solución</a>
+      <a href="#producto" class="hover:text-foreground">Producto</a>
+      <a href="#proceso" class="hover:text-foreground">Cómo trabajamos</a>
+    </nav>
+    <a href="#contacto" class="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-xs font-medium text-primary-foreground transition hover:opacity-90">
+      Hablemos
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3.5 w-3.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</header>
+
+<section id="top" class="border-b border-border/60">
+  <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12 md:py-28">
+    <div class="md:col-span-7">
+      <div class="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted-foreground">
+        <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+        Estudio de producto · Software a medida
+      </div>
+      <h1 class="mt-6 font-display text-5xl leading-[1.02] text-ink md:text-7xl">
+        Software inteligente<br/>
+        para negocios que <span class="text-primary">no tienen tiempo</span> que perder.
+      </h1>
+      <p class="mt-6 max-w-xl text-lg text-muted-foreground">
+        Creamos <strong class="font-semibold text-foreground">software de gestión a medida</strong> para autónomos y pequeños negocios. Automatiza tu día a día, entiende tus números, y vuelve a lo que de verdad importa — tu trabajo.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a href="#producto" class="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-90">
+          Conoce nuestras soluciones
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#proceso" class="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground transition hover:bg-surface">Cómo trabajamos</a>
+      </div>
+    </div>
+    <div class="md:col-span-5">
+      <div class="relative flex h-full min-h-[280px] items-center justify-center overflow-hidden rounded-2xl border border-border bg-surface">
+        <div class="relative flex h-40 w-40 items-center justify-center rounded-2xl" style="background:linear-gradient(135deg,#f4f1ea,#e8e3d6);box-shadow:0 20px 40px -12px rgba(0,0,0,.15)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="oklch(0.62 0.14 148)" stroke-width="1.5" class="h-16 w-16"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 9l9-6 9 6"/><path d="M9 21v-6h6v6"/><path d="M9 3v6M15 3v6" opacity=".4"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="problema" class="border-b border-border/60 bg-surface/60">
+  <div class="mx-auto max-w-6xl px-6 py-20">
+    <div class="grid gap-10 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <p class="text-xs uppercase tracking-[0.2em] text-muted-foreground">01 · El problema</p>
+        <h2 class="mt-4 font-display text-4xl text-ink md:text-5xl">Cada semana pierdes horas gestionando lo que no genera ingresos.</h2>
+      </div>
+      <div class="md:col-span-6 md:col-start-7">
+        <p class="text-lg text-muted-foreground">Autónomos y pequeños negocios dedican una parte enorme de su tiempo a tareas manuales que se podrían automatizar. Ese tiempo no vuelve.</p>
+        <ul class="mt-8 space-y-3" id="problem-list"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="solucion" class="border-b border-border/60">
+  <div class="mx-auto max-w-6xl px-6 py-24">
+    <div class="max-w-3xl">
+      <p class="text-xs uppercase tracking-[0.2em] text-muted-foreground">02 · Nuestra solución</p>
+      <h2 class="mt-4 font-display text-4xl text-ink md:text-5xl">Software de gestión hecho a la <span class="text-primary">medida de tu oficio</span>.</h2>
+      <p class="mt-5 text-lg text-muted-foreground">Sea cual sea tu negocio, digitalizamos exactamente lo que necesitas: citas y agendas, cobros claros, ficha de clientes y analítica útil. Nada de plantillas genéricas ni funciones que sobran — solo lo que de verdad usas, pensado desde cero para cómo trabajas.</p>
+    </div>
+    <div class="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2" id="solution-grid"></div>
+  </div>
+</section>
+
+<section id="producto" class="border-b border-border/60 bg-primary text-primary-foreground">
+  <div class="mx-auto max-w-6xl px-6 py-24">
+    <p class="text-xs uppercase tracking-[0.2em] text-primary-foreground/60">03 · Un ejemplo real</p>
+    <div class="mt-6 grid gap-12 md:grid-cols-12 md:items-center">
+      <div class="md:col-span-6">
+        <div class="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 px-3 py-1 text-xs text-primary-foreground/80">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="h-3 w-3"><path d="M12 2l2.5 7.5H22l-6 4.5 2.5 7.5L12 17l-6.5 4.5L8 14 2 9.5h7.5z"/></svg>
+          Así lo hicimos realidad para las barberías
+        </div>
+        <h2 class="mt-5 font-display text-5xl leading-[1.05] md:text-6xl">Barbería TPV</h2>
+        <p class="mt-5 max-w-lg text-lg text-primary-foreground/75">Gestión de citas, cobros y análisis para barberías independientes. El mismo enfoque se adapta a cualquier oficio: talleres, clínicas, restaurantes, tiendas de barrio y más.</p>
+        <ul class="mt-8 space-y-3" id="bullets-list"></ul>
+        <div class="mt-10 flex flex-wrap gap-3">
+          <a href="https://barberia-tpv.vercel.app" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-medium text-primary transition hover:bg-surface">
+            Visitar Barbería TPV
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="md:col-span-6">
+        <div class="overflow-hidden rounded-2xl border border-primary-foreground/10">
+          <img src="https://raw.githubusercontent.com/jamessalas123/barberia-tpv-landing/main/preview-mockup.png" alt="Barbería TPV — gestión para barberías" width="1200" height="900" loading="lazy" class="h-full w-full object-cover"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proceso" class="border-b border-border/60">
+  <div class="mx-auto max-w-6xl px-6 py-24">
+    <div class="grid gap-12 md:grid-cols-12">
+      <div class="md:col-span-4">
+        <p class="text-xs uppercase tracking-[0.2em] text-muted-foreground">04 · Cómo trabajamos</p>
+        <h2 class="mt-4 font-display text-4xl text-ink md:text-5xl">Tres pasos. Sin misterios.</h2>
+        <p class="mt-4 text-muted-foreground">Un proceso directo, pensado para dueños de negocio ocupados.</p>
+      </div>
+      <ol class="md:col-span-8 md:pl-10" id="process-list"></ol>
+    </div>
+  </div>
+</section>
+
+<section class="border-b border-border/60 bg-surface/60">
+  <div class="mx-auto max-w-6xl px-6 py-20">
+    <div class="grid gap-10 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <p class="text-xs uppercase tracking-[0.2em] text-muted-foreground">05 · Cómo trabajamos contigo</p>
+        <h2 class="mt-4 font-display text-4xl text-ink md:text-5xl">Un estudio, no una agencia.</h2>
+      </div>
+      <ul class="space-y-4 md:col-span-6 md:col-start-7" id="trust-list"></ul>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="border-b border-border/60">
+  <div class="mx-auto max-w-6xl px-6 py-28 text-center">
+    <p class="text-xs uppercase tracking-[0.2em] text-muted-foreground">06 · Hablemos</p>
+    <h2 class="mx-auto mt-5 max-w-3xl font-display text-5xl leading-[1.05] text-ink md:text-6xl">
+      ¿Tienes un negocio y crees que necesitas <span class="text-primary">software hecho a tu medida</span>?
+    </h2>
+    <p class="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">Cuéntanos qué haces y en qué se te va el tiempo. Te respondemos personalmente en menos de 24h.</p>
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+      <a href="https://wa.me/34600000000?text=Hola%20Escalia%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20una%20caja%20digital%20para%20mi%20negocio." target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground transition hover:opacity-90">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        Escríbenos por WhatsApp
+      </a>
+      <a href="mailto:contacto@escaliadigital.com" class="inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 text-sm font-medium text-foreground transition hover:bg-surface">contacto@escaliadigital.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-6 py-10 text-sm text-muted-foreground md:flex-row md:items-center">
+    <div class="flex items-center gap-2">
+      <span class="grid h-6 w-6 place-items-center rounded bg-primary text-primary-foreground">
+        <span class="font-display text-sm leading-none">e</span>
+      </span>
+      <span>© <span id="year"></span> Escalia Digital</span>
+    </div>
+    <div class="flex flex-wrap gap-6">
+      <a href="#producto" class="hover:text-foreground">Barbería TPV</a>
+      <a href="#contacto" class="hover:text-foreground">Contacto</a>
+      <a href="mailto:contacto@escaliadigital.com" class="hover:text-foreground">contacto@escaliadigital.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const problems = [
+  {icon:'<rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>', text:'Agenda en papel y llamadas perdidas.'},
+  {icon:'<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>', text:'WhatsApp desordenado con clientes.'},
+  {icon:'<rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/>', text:'Cuentas apuntadas en un cuaderno.'},
+];
+document.getElementById('problem-list').innerHTML = problems.map(p=>`
+  <li class="flex items-center gap-4 rounded-xl border border-border bg-background px-4 py-3">
+    <span class="grid h-9 w-9 place-items-center rounded-lg bg-surface text-primary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4">${p.icon}</svg>
+    </span>
+    <span class="text-sm text-foreground">${p.text}</span>
+  </li>`).join('');
+
+const solutions = [
+  {icon:'<rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>', title:'Citas y agenda', text:'Agenda visual del día, cita a cita, sin huecos ni confusiones.'},
+  {icon:'<rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/>', title:'Cobros claros', text:'Caja en tiempo real: efectivo, tarjeta y transferencia, sin hojas de cálculo.'},
+  {icon:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>', title:'Ficha de clientes', text:'Cada cliente y cobro queda registrado, listo para consultar.'},
+  {icon:'<line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/>', title:'Analítica útil', text:'Sabes cuántos clientes atiendes, cuánto facturas y qué día rinde más.'},
+];
+document.getElementById('solution-grid').innerHTML = solutions.map(s=>`
+  <div class="bg-background p-8">
+    <span class="grid h-10 w-10 place-items-center rounded-lg text-primary" style="background:oklch(0.36 0.06 155 / 5%)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5">${s.icon}</svg>
+    </span>
+    <h3 class="mt-5 text-lg font-semibold text-foreground">${s.title}</h3>
+    <p class="mt-2 text-sm text-muted-foreground">${s.text}</p>
+  </div>`).join('');
+
+const bullets = ['Agenda visual del día, cita a cita','Multicaja con reparto automático: efectivo, tarjeta y transferencia','Registro de cada cliente y cobro','Panel con ingresos y rendimiento mensual'];
+document.getElementById('bullets-list').innerHTML = bullets.map(b=>`
+  <li class="flex items-start gap-3 text-sm text-primary-foreground/90">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="mt-0.5 h-4 w-4 flex-shrink-0 text-accent"><polyline points="20 6 9 17 4 12"/></svg>
+    ${b}
+  </li>`).join('');
+
+const steps = [
+  {n:'01',title:'Entendemos tu negocio',text:'Hablamos contigo, vemos cómo trabajas, qué te roba tiempo y qué necesitas de verdad.'},
+  {n:'02',title:'Construimos tu caja digital',text:'Diseñamos una app a medida de tu oficio: solo lo que usas, exactamente como lo necesitas.'},
+  {n:'03',title:'Te acompañamos',text:'Soporte directo, mejoras continuas y una relación cercana con el estudio que la construye.'},
+];
+document.getElementById('process-list').innerHTML = steps.map((s,i)=>`
+  <li class="grid grid-cols-[auto_1fr] gap-6 py-8${i!==steps.length-1?' border-b border-border':''}">
+    <span class="font-display text-3xl text-accent">${s.n}</span>
+    <div><h3 class="text-xl font-semibold text-foreground">${s.title}</h3><p class="mt-2 text-muted-foreground">${s.text}</p></div>
+  </li>`).join('');
+
+const trustPoints = [
+  'Estudio pequeño y especializado en software de gestión — no una agencia genérica.',
+  'Hablas siempre con quien construye tu solución. Trato cercano, transparente, sin intermediarios ni comerciales.',
+  'Compromiso a largo plazo: tu software evoluciona contigo.',
+];
+document.getElementById('trust-list').innerHTML = trustPoints.map(p=>`
+  <li class="flex items-start gap-3 text-lg text-foreground">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="mt-1.5 h-4 w-4 flex-shrink-0 text-primary"><polyline points="20 6 9 17 4 12"/></svg>
+    ${p}
+  </li>`).join('');
+</script>
+</body>
+</html>
