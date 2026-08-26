@@ -183,6 +183,10 @@ tailwind.config = {
         Escríbenos por WhatsApp
       </a>
       <a href="mailto:contacto@escaliadigital.com" class="inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 text-sm font-medium text-foreground transition hover:bg-surface">contacto@escaliadigital.com</a>
+      <button type="button" onclick="copiarEmail(this)" class="copy-email-btn inline-flex items-center gap-2 rounded-full border border-border px-4 py-3.5 text-sm font-medium text-foreground transition hover:bg-surface" aria-label="Copiar email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <span class="copy-email-label">Copiar</span>
+      </button>
     </div>
   </div>
 </section>
@@ -199,12 +203,33 @@ tailwind.config = {
       <a href="#producto" class="hover:text-foreground">Barbería TPV</a>
       <a href="#contacto" class="hover:text-foreground">Contacto</a>
       <a href="mailto:contacto@escaliadigital.com" class="hover:text-foreground">contacto@escaliadigital.com</a>
+      <button type="button" onclick="copiarEmail(this)" class="copy-email-btn inline-flex items-center gap-1.5 hover:text-foreground" aria-label="Copiar email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3.5 w-3.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <span class="copy-email-label">Copiar</span>
+      </button>
     </div>
   </div>
 </footer>
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
+
+function copiarEmail(btn) {
+  const email = 'contacto@escaliadigital.com';
+  const label = btn.querySelector('.copy-email-label');
+  const original = label.textContent;
+  navigator.clipboard.writeText(email).then(() => {
+    label.textContent = '¡Copiado!';
+    btn.classList.add('text-primary');
+    setTimeout(() => {
+      label.textContent = original;
+      btn.classList.remove('text-primary');
+    }, 2000);
+  }).catch(() => {
+    label.textContent = 'Error al copiar';
+    setTimeout(() => { label.textContent = original; }, 2000);
+  });
+}
 
 const problems = [
   {icon:'<rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>', text:'Agenda en papel y llamadas perdidas.'},
